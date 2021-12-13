@@ -24,6 +24,15 @@
             font-size: 16px;
             background-color: hsl(225, 100%, 94%);
         }
+        .wavy {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        .wavy path {
+            fill: #fff;
+        }
         .custom-bg-very-pale-blue {
             background-color: hsl(225, 100%, 98%);
         }
@@ -42,11 +51,21 @@
         .custom-payment-button:hover {
             background-color: hsl(245, 75%, 65%);
         }
+
+        @media (max-width: 375px) {
+            .custom-des-wavy {
+                display: none;
+            }
+            .custom-mob-wavy {
+                display: block;
+                height: 50vh;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="flex justify-center items-center h-full">
+<div class="flex justify-center items-center h-full w-full relative">
     <div class="rounded-2xl drop-shadow-lg max-w-xs bg-white">
         <img src="images/illustration-hero.svg" alt="card-hero" class="rounded-t-2xl">
         <div class="flex flex-col items-center text-center p-5 lg:p-6">
@@ -67,6 +86,14 @@
             <button class="font-bold lg:text-xs rounded-xl w-full transition-all p-3 custom-cancel-button">Cancel Order</button>
         </div>
     </div>
+
+    <svg class="wavy custom-des-wavy" xmlns="http://www.w3.org/2000/svg" width="1440" height="437">
+        <path fill="#D6E1FF" fill-rule="evenodd" d="M0 349.974c218.558 116.035 460.05 116.035 724.475 0s502.933-116.035 715.525 0V0H0v349.974z"/>
+    </svg>
+
+    <svg class="wavy custom-mob-wavy" xmlns="http://www.w3.org/2000/svg" width="375" height="194">
+        <path fill="#D6E1FF" fill-rule="evenodd" d="M-131.808 155.366c97.026 51.512 204.233 51.512 321.62 0 117.388-51.512 223.27-51.512 317.648 0V0h-639.268v155.366z"/>
+    </svg>
 
     <div class="hidden">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
