@@ -1,37 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Order Summary Card</title>
+
+    <style>
+        /*
+
+        */
+        body {
+            height: 100vh;
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 16px;
+            background-color: hsl(225, 100%, 94%);
+        }
+        .custom-bg-very-pale-blue {
+            background-color: hsl(225, 100%, 98%);
+        }
+        .custom-primary-color {
+            color: hsl(245, 75%, 52%);
+        }
+        .custom-cancel-button {
+            color:  hsl(224, 23%, 55%);
+        }
+        .custom-cancel-button:hover {
+            color: hsl(223, 47%, 23%);
+        }
+        .custom-payment-button {
+            background-color: hsl(245, 75%, 52%);
+        }
+        .custom-payment-button:hover {
+            background-color: hsl(245, 75%, 65%);
+        }
+    </style>
 </head>
 <body>
 
-  Order Summary
+<div class="flex justify-center items-center h-full">
+    <div class="rounded-2xl drop-shadow-lg max-w-xs bg-white">
+        <img src="images/illustration-hero.svg" alt="card-hero" class="rounded-t-2xl">
+        <div class="flex flex-col items-center text-center p-5 lg:p-6">
+            <h2 class="font-black text-xl my-3">Order Summary</h2>
+            <div class="lg:text-sm mb-4">You can now listen to millions of songs, audiobooks, and podcasts on any
+                device anywhere you like!</div>
+            <div class="w-full custom-bg-very-pale-blue mb-5 p-4 rounded-xl flex justify-between items-center lg:text-sm">
+                <div class="flex items-center">
+                    <img src="images/icon-music.svg" alt="music-icon" class="mr-3">
+                    <div>
+                        <b>Annual Plan</b>
+                        <div>$59.99/year</div>
+                    </div>
+                </div>
+                <a href="#" class="custom-primary-color underline hover:no-underline"><b>Change</b></a>
+            </div>
+            <button class="font-bold lg:text-xs rounded-xl w-full transition-all p-3 text-white mb-4 drop-shadow-2xl custom-payment-button ">Proceed to Payment</button>
+            <button class="font-bold lg:text-xs rounded-xl w-full transition-all p-3 custom-cancel-button">Cancel Order</button>
+        </div>
+    </div>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <div class="hidden">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">TDP1999</a>.
+    </div>
+</div>
 
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
